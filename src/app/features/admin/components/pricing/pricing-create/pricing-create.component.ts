@@ -3,11 +3,10 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { PricingService } from '../../../../../core/services/pricing.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-import { AdminModule } from "../../../admin.routes.module";
 
 @Component({
   selector: 'app-pricing-create',
-  imports: [ReactiveFormsModule, AdminModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './pricing-create.component.html',
   styleUrl: './pricing-create.component.css'
 })
