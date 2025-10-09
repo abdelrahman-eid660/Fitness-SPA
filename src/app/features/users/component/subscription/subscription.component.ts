@@ -21,7 +21,7 @@ import { ToastrService } from 'ngx-toastr';
 export class SubscriptionComponent {
   dis: boolean = true;
   subscriptionData!: any;
-  userData: any = JSON.parse(localStorage.getItem('subscription') ?? '[]');
+  userData: any = JSON.parse(localStorage.getItem('subscription') ?? 'null');
   id!: any;
   constructor(
     private serv: PricingService,
