@@ -1,0 +1,184 @@
+<nav class="navbar navbar-expand-md">
+  <div class="container-fluid">
+    <div class="logo">
+      <div class="d-flex align-items-center">
+        <a routerLink="/admin/home" class="navbar-brand">
+          <h1 class="text-primary mb-0">
+            <i class="fas fa-hand-rock me-2"></i> Fitness
+          </h1>
+        </a>
+      </div>
+    </div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+    >
+      <span class="navbar-toggler-icon">☰</span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navebar navbar-nav text-center">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            aria-current="page"
+            routerLink="/admin/home"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            routerLinkActive="active"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Admins
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                routerLinkActive="active"
+                routerLink="/admin/al"
+                >Admins List</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLinkActive="active"
+                routerLink="/admin/ac"
+                >Admins Creata</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            routerLinkActive="active"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Courses
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                routerLinkActive="active"
+                routerLink="/admin/cl"
+                >Courses List</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLinkActive="active"
+                routerLink="/admin/cc"
+                >Courses Creata</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            routerLinkActive="active"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Trainner
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                routerLinkActive="active"
+                routerLink="/admin/tl"
+                >trainner List</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLinkActive="active"
+                routerLink="/admin/tc"
+                >trainner Creata</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            routerLinkActive="active"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Pricing Plane
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                routerLinkActive="active"
+                routerLink="/admin/pl"
+                >Pricing List</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLinkActive="active"
+                routerLink="/admin/pc"
+                >Pricing Creata</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            routerLinkActive="active"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Customers
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                routerLinkActive="active"
+                routerLink="/admin/sl"
+                >Customers List</a
+              >
+            </li>
+            <!-- <li><a class="dropdown-item" routerLinkActive="active" routerLink="/admin/su/id">Customers  Update</a></li> -->
+          </ul>
+        </li>
+        <li>
+          <a routerLink="/users/home"><i class="fa-solid fa-user"></i></a>
+        </li>
+        @if (loginData) {
+        <li>
+          <button (click)="loginOut()" class="btn btn-danger ms-3 loginout-admin">
+            Login Out
+          </button>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</nav>

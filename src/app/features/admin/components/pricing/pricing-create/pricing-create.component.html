@@ -1,0 +1,144 @@
+<div class="container-fluid admin-container">
+  <h1 class="text-center text-info my-3">Create Pricing Plane</h1>
+  <div class="col-md-6 m-auto my-5">
+    <form [formGroup]="pricingForm">
+      <div class="form-group">
+        <input
+          type="text"
+          formControlName="name"
+          placeholder="Name"
+          class="form-control my-3"
+        />
+        @if (pricingForm.get('name')?.touched && pricingForm.get('name')?.invalid)
+        {
+        <span class="text-danger"
+          >@if (controls['name'].errors?.['required']) {Plase Enter Course
+          Name}</span
+        >
+        }
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          formControlName="long"
+          placeholder="Period Of Subscription"
+          class="form-control my-3"
+        />
+        @if (pricingForm.get('long')?.touched && pricingForm.get('long')?.invalid)
+        {
+        <span class="text-danger"
+          >@if (controls['long'].errors?.['required']) {Plase Enter Period of Plane}</span
+        >
+        }
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          formControlName="feature1"
+          placeholder="Feature-1"
+          class="form-control my-3"
+        />
+        @if (pricingForm.get('feature1')?.touched && pricingForm.get('feature1')?.invalid)
+        {
+        <span class="text-danger"
+          >@if (controls['feature1'].errors?.['required']) {Plase Enter Feature}</span
+        >
+        }
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          formControlName="feature2"
+          placeholder="Feature-2"
+          class="form-control my-3"
+        />
+        @if (pricingForm.get('feature2')?.touched && pricingForm.get('feature2')?.invalid)
+        {
+        <span class="text-danger"
+          >@if (controls['feature2'].errors?.['required']) {Plase Enter Feature}</span
+        >
+        }
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          formControlName="feature3"
+          placeholder="Feature-3"
+          class="form-control my-3"
+        />
+        @if (pricingForm.get('feature3')?.touched && pricingForm.get('feature3')?.invalid)
+        {
+        <span class="text-danger"
+          >@if (controls['feature3'].errors?.['required']) {Plase Enter Feature}</span
+        >
+        }
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          formControlName="feature4"
+          placeholder="Feature-4"
+          class="form-control my-3"
+        />
+        @if (pricingForm.get('feature4')?.touched && pricingForm.get('feature4')?.invalid)
+        {
+        <span class="text-danger"
+          >@if (controls['feature4'].errors?.['required']) {Plase Enter Feature}</span
+        >
+        }
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          formControlName="feature5"
+          placeholder="Feature-5"
+          class="form-control my-3"
+        />
+        @if (pricingForm.get('feature5')?.touched && pricingForm.get('feature5')?.invalid)
+        {
+        <span class="text-danger"
+          >@if (controls['feature5'].errors?.['required']) {Plase Enter Feature}</span
+        >
+        }
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          formControlName="price"
+          placeholder="Price"
+          class="form-control my-3"
+        />
+        @if (pricingForm.get('price')?.touched &&
+        pricingForm.get('price')?.invalid) {
+        <span class="text-danger"
+          >@if (controls['price'].errors?.['required']) {Plase Enter Course
+          Price}</span
+        >
+        }
+      </div>
+      <div class="form-group">
+        <input
+          type="url"
+          formControlName="img"
+          placeholder="Image"
+          class="form-control my-3"
+        />
+        @if (pricingForm.get('img')?.touched && pricingForm.get('img')?.invalid) {
+        <span class="text-danger"
+          >@if (controls['img'].errors?.['required']) {Plase Enter Correct Url
+          Image}</span
+        >
+        }
+      </div>
+      <div class="d-grid">
+        @if (pricingForm.invalid) {
+        <button [disabled]="pricingForm.invalid" class="btn btn-info my-3">
+          Submit
+        </button>
+        }@else {
+        <button (click)="onSubmit()" class="btn btn-info my-3">Submit</button>
+        }
+      </div>
+    </form>
+  </div>
+</div>

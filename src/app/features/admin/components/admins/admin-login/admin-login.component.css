@@ -1,0 +1,29 @@
+.sidn-up a {
+  background-color: rgb(20, 162, 232);
+  color: white;
+  margin: 15px auto;
+}
+.card {
+  border: none;
+}
+.card-body {
+  background-image: url(/img/login-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h5 {
+  color: red;
+  font-weight: bold;
+}
+p {
+  color: white;
+  font-weight: 500;
+}
+input{
+  background-color: rgba(0,0,0,0.5);
+}
+input:focus{
+  background-color: rgba(0,0,0,0.5);
+  color: whitesmoke;
+}

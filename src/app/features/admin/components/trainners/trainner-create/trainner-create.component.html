@@ -1,0 +1,26 @@
+<div class="container-fluid admin-container">
+  <h1 class="text-center">Trainners create</h1>
+  <div class="col-md-6 m-auto my-5">
+    <form [formGroup]="traineerForm">
+      <div class="form-group">
+        <input type="text" class="form-control my-3" formControlName="name" placeholder="Name">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control my-3" formControlName="description" placeholder="Description">
+      </div>
+      <div class="form-group">
+        <input type="url" class="form-control my-3" formControlName="img" placeholder="Image">
+      </div>
+            <div class="d-grid">
+        @if (traineerForm.invalid) {
+        <button [disabled]="traineerForm.invalid" class="btn btn-info my-3">
+          Submit
+        </button>
+
+        }@else {
+        <button (click)="onsubmit()" class="btn btn-info my-3">Submit</button>
+        }
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+.feature-item:hover p{
+  color: white !important ;
+}
+.feature-item p{
+  color: rgb(107, 107, 107) !important ;
+}

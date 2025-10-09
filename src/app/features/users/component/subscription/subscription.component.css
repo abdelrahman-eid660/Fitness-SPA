@@ -1,0 +1,95 @@
+.plane .header-pricing .about-icon {
+  width: 100px;
+  margin: 10px 0;
+}
+.plane .properties {
+  background-color: rgba(12, 24, 68, 0.9);
+}
+.plane .properties__card {
+  box-shadow: 0px 6px 6px 0px rgba(2, 25, 65, 0.08);
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 36px 24px 25px 24px;
+}
+.plane .properties__caption span.month {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}
+.plane .properties__caption P {
+  color: #ff0000;
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.plane .properties .single-features .features-caption p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #fff;
+  text-transform: capitalize;
+}
+.formInput {
+  background-color: #121329;
+  padding: 10px 15px;
+  margin: 10px 0;
+}
+.container-form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.formInput .form-group {
+  width: 250px;
+  margin: 10px 0;
+}
+.formInput .fullname {
+  width: 100%;
+  margin: 10px 0;
+}
+.formInput .genderradio {
+  width: 250px;
+  margin: 10px 0;
+}
+.formInput .selectForm {
+  margin: 10px 0;
+  width: 250px;
+  height: 40px;
+}
+.formInput .genderradio h6 {
+  font-size: 16px;
+}
+.diet-plan h5{
+  color: #ff0000;
+}
+@media (max-width: 1200px) {
+
+  .formInput .form-group {
+    width: 200px;
+  }
+  .formInput .fullname {
+    width: 100%;
+  }
+  .formInput .genderradio {
+    width: 200px;
+  }
+  .formInput .selectForm {
+  width: 200px;
+  height: 40px;
+}
+}
+@media (max-width:992px) {
+    .formInput .form-group {
+    width: 100%;
+  }
+  .formInput .genderradio {
+    width: 100%;
+  }
+  .formInput .selectForm {
+  width: 100%;
+  height: 40px;
+}
+}

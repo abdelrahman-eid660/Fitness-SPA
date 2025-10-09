@@ -1,0 +1,37 @@
+.navbar {
+  background-color: rgb(23, 24, 52);
+}
+.login-admin a {
+  color: white;
+}
+.loginout-admin {
+  width: 90px !important;
+  padding: 5px;
+  font-size: 12px;
+  margin: auto;
+}
+.collapse .dropdown-item:hover {
+  background-color: rgb(23, 24, 52) !important;
+  color: white !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+.navbar-collapse li {
+  align-content: center;
+}
+.navbar-collapse a {
+  margin: 0 10px;
+}
+
+@media (max-width: 1055px) {
+  .loginout-admin {
+    font-size: 10px;
+    width: 70px !important;
+    padding: 5px 3px;
+  }
+}
+@media (max-width: 768px) {
+  .loginout-admin {
+    margin: 10px auto;
+  }
+}

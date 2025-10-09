@@ -1,0 +1,8 @@
+.row .team-img{
+  height: 300px;
+  width: 100%;
+}
+.row img{
+  height: 100% !important;
+  width: 100%;
+}

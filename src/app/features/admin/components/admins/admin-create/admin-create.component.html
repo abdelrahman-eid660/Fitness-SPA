@@ -1,0 +1,103 @@
+<div class="container-fluid admin-container">
+  <div class="col-md-6 my-4 m-auto">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Create Account</h5>
+        <p class="card-text">Mange The Gym System</p>
+        <div class="form" [formGroup]="adminsForm">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control my-3"
+              formControlName="username"
+              placeholder="User Name"
+            />
+            @if (adminsForm.get('username')?.touched &&
+            adminsForm.get('username')?.invalid) {
+            <span class="text-danger">
+              @if (controls['username'].errors?.['required']) { Plase Enter User
+              Name }
+            </span>
+            }
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control my-3"
+              formControlName="lastname"
+              placeholder="Last Name"
+            />
+            @if (adminsForm.get('lastname')?.touched &&
+            adminsForm.get('lastname')?.invalid) {
+            <span class="text-danger">
+              @if (controls['lastname'].errors?.['required']) { Plase Enter Your
+              Last Name }
+            </span>
+            }
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control my-3"
+              formControlName="email"
+              placeholder="Email"
+            />
+            @if (adminsForm.get('email')?.touched &&
+            adminsForm.get('email')?.invalid) {
+            <span class="text-danger">
+              @if (controls['email'].errors?.['required']) { Plase Enter Your
+              Email }
+            </span>
+            }
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control my-3"
+              formControlName="phone"
+              placeholder="Phone"
+            />
+            @if (adminsForm.get('phone')?.touched &&
+            adminsForm.get('phone')?.invalid) {
+            <span class="text-danger">
+              @if (controls['phone'].errors?.['required']) { Plase Enter Your
+              Phone }
+            </span>
+            }
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control my-3"
+              formControlName="password"
+              placeholder="Password"
+            />
+            @if (adminsForm.get('password')?.touched &&
+            adminsForm.get('password')?.invalid) {
+            <span class="text-danger">
+              @if (controls['password'].errors?.['required']) { Plase Enter Your
+              Password }
+            </span>
+            }
+          </div>
+          @if (adminsForm.invalid) {
+          <div class="d-grid">
+            <button
+              class="btn btn-info"
+              [disabled]="adminsForm.invalid"
+            >
+              Register
+            </button>
+          </div>
+          }@else {
+          <div class="d-grid">
+            <button class="btn btn-info" (click)="register()">
+              Register
+            </button>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,120 @@
+<div class="container-fluid admin-container">
+  <h1 class="text-center text-info my-3">Create Fitness Course</h1>
+  <div class="col-md-6 m-auto my-4">
+    <form [formGroup]="fitnessForm">
+      <div class="form-group">
+        <input
+          type="text"
+          formControlName="name"
+          placeholder="Name"
+          class="form-control my-3"
+        />
+        @if (fitnessForm.get('name')?.touched && fitnessForm.get('name')?.invalid)
+        {
+        <span class="text-danger"
+          >@if (controls['name'].errors?.['required']) {Plase Enter Course
+          Name}</span
+        >
+        }
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          formControlName="cotch"
+          placeholder="Cotch"
+          class="form-control my-3"
+        />
+        @if (fitnessForm.get('cotch')?.touched &&
+        fitnessForm.get('cotch')?.invalid) {
+        <span class="text-danger"
+          >@if (controls['cotch'].errors?.['required']) {Plase Enter Course
+          cotch}</span
+        >
+        }
+      </div>
+      <div class="form-group">
+        <input
+          type="date"
+          formControlName="date"
+          placeholder="Date"
+          class="form-control my-3"
+        />
+        @if (fitnessForm.get('date')?.touched &&
+        fitnessForm.get('date')?.invalid) {
+        <span class="text-danger"
+          >@if (controls['date'].errors?.['required']) {Plase Enter Course
+          date}</span
+        >
+        }
+      </div>
+      <div class="form-group">
+        <input
+          type="time"
+          formControlName="time"
+          placeholder="Time"
+          class="form-control my-3"
+        />
+        @if (fitnessForm.get('time')?.touched &&
+        fitnessForm.get('time')?.invalid) {
+        <span class="text-danger"
+          >@if (controls['time'].errors?.['required']) {Plase Enter Course
+          time}</span
+        >
+        }
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          formControlName="description"
+          placeholder="Description"
+          class="form-control my-3"
+        />
+        @if (fitnessForm.get('description')?.touched &&
+        fitnessForm.get('description')?.invalid) {
+        <span class="text-danger"
+          >@if (controls['description'].errors?.['required']) {Plase Enter Course
+          description}</span
+        >
+        }
+      </div>
+      <div class="form-group">
+        <input
+          type="url"
+          formControlName="img"
+          placeholder="Icon-Image"
+          class="form-control my-3"
+        />
+        @if (fitnessForm.get('img')?.touched && fitnessForm.get('img')?.invalid) {
+        <span class="text-danger"
+          >@if (controls['img'].errors?.['required']) {Plase Enter Correct Url
+          Image}</span
+        >
+        }
+      </div>
+      <div class="form-group">
+        <input
+          type="url"
+          formControlName="profile_img"
+          placeholder="Profile Image"
+          class="form-control my-3"
+        />
+        @if (fitnessForm.get('profile_img')?.touched && fitnessForm.get('profile_img')?.invalid) {
+        <span class="text-danger"
+          >@if (controls['profile_img'].errors?.['required']) {Plase Enter Correct Url
+          Image}</span
+        >
+        }
+      </div>
+      <div class="d-grid">
+        @if (fitnessForm.invalid) {
+        <button [disabled]="fitnessForm.invalid" class="btn btn-info my-3">
+          Submit
+        </button>
+
+        }@else {
+        <button (click)="onSubmit()" class="btn btn-info my-3">Submit</button>
+        }
+      </div>
+    </form>
+  </div>
+</div>

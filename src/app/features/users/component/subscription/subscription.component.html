@@ -1,0 +1,275 @@
+<div class="container">
+  <h2 class="text-center display-1 my-5 mb-0">Your Plane</h2>
+  <div class="row align-items-center justify-content-between">
+    @if (userData) {
+    <h2>Hi {{ userData.fullname }}</h2>
+    <div class="details-subscription">
+      <h2>Your Subscription Details</h2>
+      <p>👤 <strong>{{ userData.fullname }}</strong></p>
+      <p>📅 Start Date: {{ userData.beg_subscription }}</p>
+      <p>📅 End Date: {{ userData.end_subscription }}</p>
+      <p>🎂 Birth Date: {{ userData.birth }}</p>
+      <p>📍 City: {{ userData.city }}</p>
+      <p>📞 Phone: {{ userData.phone }}</p>
+      <p>🕒 Duration: 30 Days</p>
+      <p>🔥 Estimated Calories: 2200 kcal/day</p>
+    </div>
+    <!-- ✅ نظام غذائي -->
+  <div class="diet-plan mt-5 p-4 bg-dark rounded-4 text-light shadow">
+    <h3 class="mb-4 text-warning text-center">🥗 Your Daily Diet Plan</h3>
+
+    <div class="mb-3">
+      <h5>🍳 Breakfast</h5>
+      <ul>
+        <li>4 Boiled Eggs</li>
+        <li>1 Slice of Brown Bread</li>
+        <li>1 Cup of Milk or Coffee</li>
+      </ul>
+    </div>
+
+    <div class="mb-3">
+      <h5>🍛 Lunch</h5>
+      <ul>
+        <li>Grilled Chicken Breast (250g)</li>
+        <li>1 Cup of Rice or Sweet Potato</li>
+        <li>Green Salad with Olive Oil</li>
+      </ul>
+    </div>
+
+    <div class="mb-3">
+      <h5>🍲 Dinner</h5>
+      <ul>
+        <li>Tuna Salad or Boiled Vegetables</li>
+        <li>1 Cup of Yogurt</li>
+      </ul>
+    </div>
+
+    <p class="text-center mt-3">
+      💧 Remember to drink at least from 4 to 6 liters of water daily.
+    </p>
+  </div>
+        <button class="btn btn-danger m-3" (click)="cancelSubscription(userData.id)">Cancel Subscription</button>
+    } @else if (subscriptionData) {
+    <div class="col-lg-5">
+      <div class="plane h-100">
+        <div class="row mb-4 my-4">
+          <div>
+            <div class="properties mb-30">
+              <div class="properties__card">
+                <div
+                  class="header-pricing d-flex justify-content-between align-items-center"
+                >
+                  <div class="about-icon">
+                    <img [src]="subscriptionData.img" class="img-fluid" />
+                  </div>
+                  <div class="title">
+                    <h2 class="text-light display-6">
+                      {{ subscriptionData.name }}
+                    </h2>
+                  </div>
+                </div>
+                <div class="properties__caption">
+                  <span class="month">{{ subscriptionData.long }}</span>
+                  <p class="mb-25">{{ subscriptionData.price | currency }}/M</p>
+                  <div class="single-features d-flex">
+                    <div class="features-icon me-3">
+                      <img src="img/icon/check.svg" alt="" />
+                    </div>
+                    <div class="features-caption">
+                      <p>{{ subscriptionData.feature1 }}</p>
+                    </div>
+                  </div>
+                  <div class="single-features d-flex">
+                    <div class="features-icon me-3">
+                      <img src="img/icon/check.svg" alt="" />
+                    </div>
+                    <div class="features-caption">
+                      <p>{{ subscriptionData.feature2 }}</p>
+                    </div>
+                  </div>
+                  <div class="single-features d-flex">
+                    <div class="features-icon me-3">
+                      <img src="img/icon/check.svg" alt="" />
+                    </div>
+                    <div class="features-caption">
+                      <p>{{ subscriptionData.feature3 }}</p>
+                    </div>
+                  </div>
+                  <div class="single-features d-flex">
+                    <div class="features-icon me-3">
+                      <img src="img/icon/check.svg" alt="" />
+                    </div>
+                    <div class="features-caption">
+                      <p>{{ subscriptionData.feature4 }}</p>
+                    </div>
+                  </div>
+                  <div class="single-features d-flex mb-20">
+                    <div class="features-icon me-3">
+                      <img src="img/icon/check.svg" alt="" />
+                    </div>
+                    <div class="features-caption">
+                      <p>{{ subscriptionData.feature5 }} shop.</p>
+                    </div>
+                  </div>
+                  <a
+                    routerLink="/users/subscription"
+                    class="border-btn border-btn2 w-100 btn btn-outline-danger"
+                    >Join Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="formInput h-100">
+        <form [formGroup]="subscriptionForm" (ngSubmit)="Onsubmit()">
+          <h4 class="my-3 text-light">Full Name :</h4>
+          <div class="form-group fullname">
+            <input
+              type="text"
+              name="fullname"
+              id="nametext"
+              formControlName="fullname"
+              class="form-control my-3"
+              placeholder="Full Name"
+            />
+          </div>
+          <div class="container-form">
+            <div class="form-group">
+              <h4 class="my-3 text-light">Email :</h4>
+              <input
+                type="email"
+                name="email"
+                id="emailtext"
+                formControlName="email"
+                class="form-control my-3"
+                placeholder="Email"
+              />
+            </div>
+            <div class="form-group">
+              <h4 class="my-3 text-light">phone :</h4>
+              <input
+                type="text"
+                name="phone"
+                id="phonetext"
+                formControlName="phone"
+                class="form-control my-3"
+                placeholder="Phone Number"
+              />
+            </div>
+          </div>
+          <div class="container-form">
+            <div class="form-group">
+              <h4 class="my-3 text-light">Beg of subscriptions</h4>
+              <input
+                type="date"
+                name="date"
+                id="date_beg_text"
+                formControlName="beg_subscription"
+                class="form-control my-3"
+                placeholder="Beging of subscription"
+              />
+            </div>
+            <div class="form-group">
+              <h4 class="my-3 text-light">End of subscriptions</h4>
+              <input
+                type="date"
+                name="date"
+                id="date_end_text"
+                formControlName="end_subscription"
+                class="form-control my-3"
+                placeholder="End of subscription"
+                readonly
+              />
+            </div>
+            <div class="form-group">
+              <h4 class="my-3 text-light">Date of Birth :</h4>
+              <input
+                type="date"
+                name="date"
+                id="birthtext"
+                formControlName="birth"
+                class="form-control my-3"
+                placeholder="Date of Birth"
+              />
+            </div>
+            <div class="genderradio">
+              <h4 class="my-3 text-light">Gender :</h4>
+              <div class="genderform d-flex">
+                <div class="form-check me-3 my-2">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    id="male"
+                    value="male"
+                    formControlName="gender"
+                  />
+                  <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check my-2">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    id="female"
+                    value="Female"
+                    formControlName="gender"
+                  />
+                  <label class="form-check-label" for="Female">Female</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-form">
+            <div class="selectForm">
+              <select class="form-select" formControlName="city">
+                <option disabled selected value="">Chosse city</option>
+                <option value="Cairo">Cairo</option>
+                <option value="Alex">Alex</option>
+                <option value="Giza">Giza</option>
+                <option value="Luxor">Luxor</option>
+                <option value="Assiut">Assiut</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="address"
+                id="addresstext"
+                formControlName="address"
+                class="form-control"
+                placeholder="Address"
+              />
+            </div>
+          </div>
+          <div class="form-check my-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="checkChecked"
+              checked
+            />
+            <label class="form-check-label text-light" for="checkChecked"
+              >I agree to abide by the gym's rules and regulations.</label
+            >
+          </div>
+          <div class="d-grid mb-3">
+            <button (click)="Onsubmit()" type="button" class="btn btn-success">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    } @else {
+    <h1 class="text-danger display-4 text-center">
+      You haven't chosen your subscription yet.
+    </h1>
+    }
+  </div>
+</div>

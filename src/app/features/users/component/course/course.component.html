@@ -1,0 +1,90 @@
+<!-- Fitness Goal start -->
+        <div class="container-fluid goal">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="goal-content">
+                            <h4 class="text-primary">Fitness Goal</h4>
+                            <h1 class="display-4 mb-4">Complete your possibilities, Achieve Your Fitness Goals.</h1>
+                            <div class="goal-item d-flex p-4">
+                                <div class="d-flex me-4">
+                                    <div class="bg-primary d-inline p-3" style="width: 80px; height: 80px;">
+                                        <img src="img/icon-1.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4>Free Fitness Training</h4>
+                                    <p class="text-white mb-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore est harum</p>
+                                </div>
+                            </div>
+                            <div class="goal-item d-flex p-4 mb-4">
+                                <div class="d-flex me-4">
+                                    <div class="bg-primary d-inline p-3" style="width: 80px; height: 80px;">
+                                        <img src="img/icon-6.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4>Cardio and Strength</h4>
+                                    <p class="text-white mb-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore est harum</p>
+                                </div>
+                            </div>
+                            <div class="ms-1">
+                                <a href="#" class="btn btn-primary py-3 px-5 ms-2"> <span>Read Details</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
+                        <div class="h-100">
+                            <img src="img/fitness-goal-banner.png" class="img-fluid h-100" style="object-fit: cover;" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fitness Goal End -->
+<!-- Courses Start -->
+        <div class="container-fluid courses overflow-hidden py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary"> Our Courses</h4>
+                    <h1 class="display-4 text-white mb-4">Out Our Highlights Below</h1>
+                    <p class="text-white mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
+                    </p>
+                </div>
+                <div class="row gy-4 gx-0 justify-content-center">
+                    @for (item of visibleData; track $index) {
+                      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="courses-item">
+                            <div class="courses-item-inner p-4">
+                                <div class="d-flex justify-content-between mb-4">
+                                    <div class="courses-icon-img p-3">
+                                        <img [src]="item.img" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="data-info d-flex flex-column">
+                                        <div class="courses-trainer d-flex align-items-center mb-1">
+                                            <div class="me-2" style="width: 25px; height: 25px;">
+                                                <img [src]="item.profile_img" class="img-fluid" alt="">
+                                            </div>
+                                            <p class="mb-0">{{item.cotch}}</p>
+                                        </div>
+                                        <div class="courses-date">
+                                            <p class="mb-1">Date: {{item.date}}</p>
+                                            <p class="mb-0">Time: {{item.time}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="d-inline-block h4 mb-3">{{item.name}}</a>
+                                <p class="mb-4">{{item.description}}
+                                </p>
+                                <a href="#" class="btn btn-primary py-2 px-4"> <span>Read More</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
+                        <a (click)="toggleView()" class="btn btn-primary py-3 px-5"> <span>{{ showAll ? 'Less' : 'Read more' }}</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Courses End -->

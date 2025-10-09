@@ -1,0 +1,38 @@
+.pricing-area{
+  padding:0px;
+}
+  .box-Plane .properties{
+    height: 100%;
+  }
+  .pricing-area .properties__caption span.month {
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+}
+.pricing-area .properties__caption P {
+    color: #FF0000;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.pricing-area .properties .single-features .features-caption p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #fff;
+    text-transform: capitalize;
+}
+@media (max-width:992px) {
+  .pricing-area .properties__caption span.month {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+}
+.pricing-area .properties__caption P {
+    color: #FF0000;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+}
