@@ -7,6 +7,6 @@ import { ApifunctionsService } from './apifunctions.service';
 })
 export class TrainnerService extends ApifunctionsService {
   constructor(protected override http : HttpClient ){
-    super('http://localhost:3000/Trainers',http)
+    super('https://fitness.eida0556.workers.dev/Trainers',http)
   }
 }

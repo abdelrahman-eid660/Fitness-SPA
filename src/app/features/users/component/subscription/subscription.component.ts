@@ -60,7 +60,6 @@ export class SubscriptionComponent {
     // تنسيق التاريخ بشكل yyyy-mm-dd
     let formattedStart = startDate.toISOString().split('T')[0];
     let formattedEnd = endDate.toISOString().split('T')[0];
-    console.log(formattedStart);
 
     this.subscriptionForm.patchValue({
       beg_subscription: formattedStart,

@@ -7,6 +7,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PricingService extends ApifunctionsService {
   constructor(protected override http: HttpClient) {
-    super('http://localhost:3000/pricing', http);
+    super('https://fitness.eida0556.workers.dev/pricing', http);
   }
 }

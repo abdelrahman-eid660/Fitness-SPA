@@ -8,6 +8,6 @@ import { HttpClient } from '@angular/common/http';
 export class SubscriptionService extends ApifunctionsService{
 
   constructor(protected override http : HttpClient) {
-    super("http://localhost:3000/subscriptions" , http)
+    super("https://fitness.eida0556.workers.dev/subscriptions" , http)
    }
 }

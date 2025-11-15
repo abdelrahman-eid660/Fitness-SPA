@@ -1,0 +1,16 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	// "name": "ignite-json",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-10-26",
+	"assets": {
+		"directory": "public"
+	},
+	"kv_namespaces": [
+		{
+			"binding": "KV_DB",
+			"id": "5b2516489dd04ffbabe9efd9f6cd42ca",
+			"remote": true
+		}
+	]
+}
